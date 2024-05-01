@@ -16,6 +16,8 @@ require('lazy').setup({
 
   -- visual git plugins
   require 'plugins.git',
+  -- plugins for text selection
+  require 'plugins.select',
   -- NOTE: Plugins can also be configured to run lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle
@@ -443,12 +445,12 @@ require('lazy').setup({
 
       -- There are additional nvim-treesitter modules that you can use to interact
       -- with nvim-treesitter. You should go explore a few and see what interests you:
-      --
       --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
       --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
       --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
     end,
   },
+  { 'nvim-treesitter/nvim-treesitter-context', opts = {} },
   -- NOTE: Next step on your Neovim journey: Add/Configure additional plugins for kickstart
   --
   --  Here are some example plugins that I've included in the kickstart repository.
